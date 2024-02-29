@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main'
+    'main',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -139,3 +140,10 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+LOGIN_URL = "users:sign-in"
+LOGIN_REDIRECT_URL = "users:account"
+LOGOUT_REDIRECT_URL = "users:sign-in"
+
+BASE_COUNTRY = "BD"
